@@ -76,9 +76,14 @@ def delete_task(id_: int):
     with open('data.json', 'r+') as f:
         try:
             data = json.load(f)
-        except json.JSONDecodeError:
+        except json.JSONDecodeError as e:
+            print('An error occurred:', e)
+            return
+
+        if not data:
             print('Task list is empty')
             return
+
         for task in data:
             if task['id'] == id_:
                 data.remove(task)
@@ -90,7 +95,11 @@ def update_task(id_: int, new_task: str = None, new_status: str = None):
     with open('data.json', 'r+') as f:
         try:
             data = json.load(f)
-        except json.JSONDecodeError:
+        except json.JSONDecodeError as e:
+            print('An error occurred:', e)
+            return
+
+        if not data:
             print('Task list is empty')
             return
 
@@ -112,9 +121,13 @@ def list_tasks(status: str = 'all'):
     with open('data.json', 'r+') as f:
         try:
             data = json.load(f)
-        except json.JSONDecodeError:
-            print('Task list is empty')
+        except json.JSONDecodeError as e:
+            print('An error occurred:', e)
             return
+
+    if not data:
+        print('Task list is empty')
+        return
 
     headers = ('id', 'description', 'status', 'createdAt', 'updatedAt')
 
