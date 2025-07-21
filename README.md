@@ -14,12 +14,12 @@ This is a solution for the [task-tracker project](https://roadmap.sh/projects/ta
 
 ### Using pip
 ```bash
-pip install git+https://github.com/Chinchopa234/taskcli.git
+pip install git+https://github.com/Chinchopa234/CLI-TaskTracker.git
 ```
 
 ### From source
 ```bash
-git clone https://github.com/Chinchopa234/taskcli.git
+git clone https://github.com/Chinchopa234/CLI-TaskTracker.git
 cd taskcli
 python setup.py install
 ```
