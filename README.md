@@ -20,7 +20,7 @@ pip install git+https://github.com/Chinchopa234/CLI-TaskTracker.git
 ### From source
 ```bash
 git clone https://github.com/Chinchopa234/CLI-TaskTracker.git
-cd taskcli
+cd CLI-TaskTracker
 python setup.py install
 ```
 ## Usage
